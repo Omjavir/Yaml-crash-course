@@ -1,0 +1,36 @@
+# yaml basic syntax
+
+course: "Yaml Crash Course"
+version: 1.1
+price: &price 200 # & for declaring the variable
+is_public:true
+release_date:2023-01-10:11:30
+pre_enroll: null
+tags: # Arrays of object
+  - python
+  - javascript
+tags:["python", "javascript"] # Alternative ways
+tags_details: # Alternative ways
+  -name: "sarthak"
+   email:"sarthak@gmail.com"
+   role: "developer"
+  -name: "pratham"
+   email:"pratham@gmail.com"
+   role: "cloud"
+  -{name: "adarsh"
+   email:"adarsh@gmail.com"
+   role: "software"}
+short_desc: >
+  here is a short description
+  which will store in one line
+  without these indentations.
+large_desc: | 
+  here is a large description
+    which will store according
+      to indentations
+processing_payment : *price # * for referencing the variable
+advance : &advance # For declaring the key value pair as variable
+  my_key : my_value
+another_advance :
+  one : two
+  <<: *advance # <<: for referencing a key value variable pair
